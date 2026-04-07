@@ -1,0 +1,8 @@
+Font size	Quantity	
+12px	1×	Select
+16px	15×	Select
+18px	12×	Select
+24px	13×	Select
+36px	1×	Select
+96px	1×
+

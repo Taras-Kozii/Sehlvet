@@ -88,10 +88,13 @@ h6 {
 
 .page {
   min-width: 320px;
-  color: #000;
-  font-family: "";
+  color: #2e2e2e;
+  font-family: "Playfair Display", serif;
   font-size: 1rem;
-  background-color: #fff;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f0eadc;
   overflow-x: clip;
 }
 
@@ -124,19 +127,18 @@ h6 {
 }
 
 [class*=__container] {
-  max-width: 1200px;
-  padding-inline: 15px;
+  max-width: 1236px;
+  padding-inline: 18px;
   margin-inline: auto;
   overflow-x: clip;
 }
 
 .title {
-  font-family: "";
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   line-height: 100%;
-  color: #000;
+  color: #2e2e2e;
   font-size: calc(4.25rem + (-1.25) * (100vw - 20rem) / (27.99875));
-  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
 }
 @media (min-width: 767.98px) {
   .title {
@@ -147,6 +149,9 @@ h6 {
   .title {
     font-size: 3rem;
   }
+}
+.title {
+  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
 }
 @media (min-width: 767.98px) {
   .title {
@@ -160,9 +165,9 @@ h6 {
 }
 
 .subtitle {
-  font-family: "";
+  font-family: "Playfair Display", serif;
   line-height: 150%;
-  color: #000;
+  color: #2e2e2e;
   font-size: calc(1.5rem + (1) * (100vw - 20rem) / (27.99875));
 }
 @media (min-width: 767.98px) {
@@ -217,12 +222,14 @@ h6 {
   display: block;
   aspect-ratio: 1/1;
   width: 60px;
-  overflow: hidden;
 }
 @media (max-width: 1440px) {
   .logo__img {
     width: calc(42px + (18) * (100vw - 320px) / (1120));
   }
+}
+.logo__img {
+  overflow: hidden;
 }
 .logo__img img {
   width: 100%;
