@@ -181,35 +181,6 @@ h6 {
   }
 }
 
-.button {
-  width: min(100%, 480px);
-  position: relative;
-  left: 0;
-  right: 0;
-  padding-block: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #2b9ee7;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 150%;
-  border-radius: 20px;
-  border: 2px solid #6cafd9;
-  background: #c9e4ea;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
-}
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -238,6 +209,81 @@ h6 {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 2px solid #754f24;
+  padding: 0.875rem 2.25rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #754f24;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.button > svg {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  stroke: #754f24;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover, .button:focus-within {
+    -webkit-box-shadow: 10px 10px 40px #d1d1d1;
+            box-shadow: 10px 10px 40px #d1d1d1;
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .button:active, .button:focus, .button:focus-within {
+    -webkit-box-shadow: 10px 10px 40px #d1d1d1;
+            box-shadow: 10px 10px 40px #d1d1d1;
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover svg, .button:focus-within svg {
+    font-size: 1.2em;
+    -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .button:active svg, .button:focus svg, .button:focus-within svg {
+    font-size: 1.2em;
+    -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+}
+
+.button--bg {
+  background-color: #754f24;
+  color: #fff;
+}
+.button--bg > svg {
+  stroke: #fff;
 }
 
 .header {

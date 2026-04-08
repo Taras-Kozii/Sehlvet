@@ -17,30 +17,6 @@
 }
 
 //=================================BUTTON=============================
-.button {
-  width: min(100%, 480px);
-  position: relative;
-  left: 0;
-  right: 0;
-  padding-block: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #2b9ee7;
-
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 150%;
-
-  border-radius: 20px;
-  border: 2px solid #6cafd9;
-  background: #c9e4ea;
-  transition: $transition-duraction;
-  cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
-}
-
 // ==============================LOGO
 .logo {
   display: flex;
@@ -51,5 +27,46 @@
     aspect-ratio: 1 / 1;
     @include adaptive-property(width, 42, 0, 60);
     @include ibg;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 2px solid $bg-color-olive;
+  padding: 0.875rem 2.25rem;
+  transition: all $transition-duraction linear;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: $bg-color-olive;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+
+  > svg {
+    transition: all 0.4s ease-in;
+    stroke: $bg-color-olive;
+  }
+  @include hover {
+    box-shadow: 10px 10px 40px #d1d1d1;
+    transform: translateY(-5px);
+  }
+  @include hover-pseudo(" svg") {
+    font-size: 1.2em;
+    transform: translateX(8px);
+  }
+}
+.button--bg {
+  background-color: $bg-color-olive;
+  color: #fff;
+
+  > svg {
+    stroke: #fff;
   }
 }
