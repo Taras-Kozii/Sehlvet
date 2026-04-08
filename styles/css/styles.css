@@ -86,6 +86,13 @@ h6 {
   font-size: inherit;
 }
 
+@font-face {
+  font-family: "Wilkysta";
+  src: url("/fonts/Wilkysta.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .page {
   min-width: 320px;
   color: #2e2e2e;
@@ -131,54 +138,6 @@ h6 {
   padding-inline: 18px;
   margin-inline: auto;
   overflow-x: clip;
-}
-
-.title {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  line-height: 100%;
-  color: #2e2e2e;
-  font-size: calc(4.25rem + (-1.25) * (100vw - 20rem) / (27.99875));
-}
-@media (min-width: 767.98px) {
-  .title {
-    font-size: calc(3rem + (0) * (100vw - 47.99875rem) / (42.00125));
-  }
-}
-@media (min-width: 1440px) {
-  .title {
-    font-size: 3rem;
-  }
-}
-.title {
-  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
-}
-@media (min-width: 767.98px) {
-  .title {
-    margin-bottom: calc(8px + (-4) * (100vw - 767.98px) / (672.02));
-  }
-}
-@media (min-width: 1440px) {
-  .title {
-    margin-bottom: 4px;
-  }
-}
-
-.subtitle {
-  font-family: "Playfair Display", serif;
-  line-height: 150%;
-  color: #2e2e2e;
-  font-size: calc(1.5rem + (1) * (100vw - 20rem) / (27.99875));
-}
-@media (min-width: 767.98px) {
-  .subtitle {
-    font-size: calc(2.5rem + (0) * (100vw - 47.99875rem) / (42.00125));
-  }
-}
-@media (min-width: 1440px) {
-  .subtitle {
-    font-size: 2.5rem;
-  }
 }
 
 .logo {
@@ -287,6 +246,58 @@ h6 {
 
 .line--l {
   max-width: 530px;
+}
+
+.title {
+  color: #2e2e2e;
+}
+.title strong {
+  font-size: 2.875rem;
+}
+@media (max-width: 1440px) {
+  .title strong {
+    font-size: calc(1.8rem + (1.075) * (100vw - 20rem) / (70));
+  }
+}
+.title span {
+  font-size: 1.75rem;
+}
+@media (max-width: 1440px) {
+  .title span {
+    font-size: calc(1rem + (0.75) * (100vw - 20rem) / (70));
+  }
+}
+.title strong,
+.title span {
+  font-family: "Wilkysta";
+}
+
+.section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.875rem;
+}
+.section-header__body {
+  font-size: 1.125rem;
+  font-size: 1.125rem;
+}
+@media (max-width: 1440px) {
+  .section-header__body {
+    font-size: calc(0.75rem + (0.375) * (100vw - 20rem) / (70));
+  }
+}
+.section-header {
+  row-gap: 1.875rem;
+}
+@media (max-width: 1440px) {
+  .section-header {
+    row-gap: calc(0.9375rem + (0.9375) * (100vw - 20rem) / (70));
+  }
 }
 
 .header {

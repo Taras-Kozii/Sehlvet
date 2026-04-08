@@ -1,23 +1,5 @@
 @use "../utils/_index.scss" as *;
 
-.title {
-  font-family: $font-family;
-  font-weight: 600;
-  line-height: 100%;
-  color: $text-color-main;
-  @include adaptive-property(font-size, 4.25, 3, 3, rem);
-  @include adaptive-property(margin-bottom, 24, 8, 4);
-}
-
-.subtitle {
-  font-family: $font-family;
-  line-height: 150%;
-  color: $text-color-main;
-  @include adaptive-property(font-size, 1.5, 2.5, 2.5, rem);
-}
-
-//=================================BUTTON=============================
-// ==============================LOGO
 .logo {
   font-family: $font-family;
   font-weight: 600;
@@ -77,4 +59,28 @@
 }
 .line--l {
   max-width: 530px;
+}
+.title {
+  color: $text-color-main;
+  strong {
+    @include adaptive-property(font-size, 1.8, 0, 2.875, rem);
+  }
+  span {
+    @include adaptive-property(font-size, 1, 0, 1.75, rem);
+  }
+  strong,
+  span {
+    font-family: "Wilkysta";
+  }
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875rem;
+  &__body {
+    font-size: 1.125rem;
+    @include adaptive-property(font-size, 0.75, 0, 1.125, rem);
+  }
+  @include adaptive-property(row-gap, 0.9375, 0, 1.875, rem)
 }
