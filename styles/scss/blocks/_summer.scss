@@ -1,1 +1,70 @@
 @use "../utils/_index" as *;
+
+.summer {
+  &__container {
+    @include adaptive-property(margin-bottom, 60, 0, 132);
+  }
+  &__header {
+    @include adaptive-property(margin-bottom, 1.5625, 0, 3.125, rem);
+  }
+  &__colums {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-property(gap, 24, 0, 65);
+  }
+  &__left-column {
+    max-width: 543px;
+  }
+  &__right-column {
+    max-width: 586px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  &__text p {
+    line-height: 138.888889%; /* 25/18 */
+    @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
+  }
+  &__img {
+    border-radius: $radius-l;
+    margin-inline: auto;
+    @include ibg;
+  }
+  &__img-left {
+    max-width: 410px;
+    aspect-ratio: 410 / 521;
+    margin-top: 20px;
+    @include adaptive-property(margin-bottom, 20, 0, 42);
+  }
+  &__img-right-l {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    max-width: 413px;
+    aspect-ratio: 413 / 491;
+    z-index: -1;
+  }
+  &__img-right-s {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    max-width: 224px;
+    margin-left: 0;
+    aspect-ratio: 224 / 284;
+    z-index: 1;
+  }
+  &__text-right {
+    @include adaptive-property(margin-bottom, 1.125, 0,  2.25, rem);
+  }
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr auto;
+  }
+  &__button {
+    justify-self: start;
+    align-self: start;
+    grid-row: 3 / -1;
+    grid-column: 2 / -1;
+  }
+}

@@ -1,1 +1,7 @@
 @use "../utils/_index" as *;
+
+.trending {
+  &__container {
+    @include adaptive-property(margin-bottom, 40, 0, 94);
+  }
+}
