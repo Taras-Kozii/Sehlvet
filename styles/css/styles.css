@@ -477,3 +477,26 @@ h6 {
   grid-row: 3/-1;
   grid-column: 2/-1;
 }
+
+.winter__container {
+  margin-bottom: 132px;
+}
+@media (max-width: 1440px) {
+  .winter__container {
+    margin-bottom: calc(60px + (72) * (100vw - 320px) / (1120));
+  }
+}
+.winter__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 55px;
+}
+@media (max-width: 1440px) {
+  .winter__columns {
+    gap: calc(20px + (35) * (100vw - 320px) / (1120));
+  }
+}

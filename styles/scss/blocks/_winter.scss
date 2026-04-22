@@ -1,1 +1,12 @@
 @use "../utils/_index" as *;
+
+.winter {
+  &__container {
+    @include adaptive-property(margin-bottom, 60, 0, 132);
+  }
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-property(gap, 20, 0, 55);
+  }
+}
