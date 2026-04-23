@@ -1,1 +1,7 @@
 @use "../utils/_index" as *;
+
+.reviews {
+  &__container {
+    @include adaptive-property(margin-bottom, 60, 0, 132);
+  }
+}
