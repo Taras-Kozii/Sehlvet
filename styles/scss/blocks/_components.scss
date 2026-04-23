@@ -80,6 +80,7 @@
   row-gap: 1.875rem;
   &__body {
     font-size: 1.125rem;
+    font-weight: 400;
     @include adaptive-property(font-size, 0.75, 0, 1.125, rem);
   }
   @include adaptive-property(row-gap, 0.9375, 0, 1.875, rem)
