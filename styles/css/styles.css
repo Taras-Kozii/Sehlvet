@@ -565,6 +565,19 @@ h6 {
   grid-column: 2/-1;
 }
 
+.winter__header {
+  margin-left: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+  margin-bottom: 84px;
+}
+@media (max-width: 1440px) {
+  .winter__header {
+    margin-bottom: calc(36px + (48) * (100vw - 320px) / (1120));
+  }
+}
 .winter__container {
   margin-bottom: 132px;
 }
@@ -586,6 +599,20 @@ h6 {
   .winter__columns {
     gap: calc(20px + (35) * (100vw - 320px) / (1120));
   }
+}
+.winter__column-left, .winter__column-right {
+  width: 50%;
+}
+.winter__text-right {
+  margin-bottom: 56px;
+}
+@media (max-width: 1440px) {
+  .winter__text-right {
+    margin-bottom: calc(24px + (32) * (100vw - 320px) / (1120));
+  }
+}
+.winter__text-left {
+  margin-bottom: 17px;
 }
 
 .reviews__container {

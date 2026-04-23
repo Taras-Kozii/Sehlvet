@@ -1,6 +1,12 @@
 @use "../utils/_index" as *;
 
 .winter {
+  &__header {
+    margin-left: auto;
+    width: fit-content;
+    text-align: right;
+    @include adaptive-property(margin-bottom, 36, 0, 84);
+  }
   &__container {
     @include adaptive-property(margin-bottom, 60, 0, 132);
   }
@@ -8,5 +14,15 @@
     display: flex;
     justify-content: space-between;
     @include adaptive-property(gap, 20, 0, 55);
+  }
+  &__column-left,
+  &__column-right {
+   width: 50%;
+  }
+  &__text-right {
+    @include adaptive-property(margin-bottom, 24, 0, 56);
+  }
+  &__text-left {
+    margin-bottom: 17px;
   }
 }
