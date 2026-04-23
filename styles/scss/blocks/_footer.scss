@@ -10,6 +10,8 @@
     @include adaptive-property(padding-block, 30, 0, 60);
   }
   &__logo {
+    display: inline-block;
+     margin-bottom: 0.875rem;
     span {
       font-size: 1.5rem;
       font-weight: 600;
@@ -21,9 +23,18 @@
     line-height: 131.25%; /* 21/16 */
     font-weight: 400;
     color: $text-color-2;
+    @include adaptive-property(margin-bottom, 1, 0, 2, rem);
+  }
+  &__icons {
+    max-width: 240px;
   }
 }
 .footer-menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8125rem;
+  }
   &__link {
     font-size: 1rem;
     line-height: 131.25%; /* 21/16 */
@@ -32,6 +43,10 @@
   }
 }
 .contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8125rem;
+
   &__title {
     font-size: 1rem;
     line-height: 131.25%; /* 21/16 */
@@ -44,4 +59,8 @@
     font-weight: 400;
     color: $text-color-2;
   }
+}
+.socials {
+  display: flex;
+  column-gap: 20px;
 }

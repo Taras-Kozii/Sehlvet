@@ -1,13 +1,13 @@
 @use "../utils/index" as *;
 
 .link-underline-show-center {
-  $before-height: 2px;
-  color: #000;
+  $before-height: 1px;
+  color: $text-color-2;
   cursor: pointer;
 
   span {
     position: relative;
-    color: #000;
+    color: $text-color-2;
 
     @include hover-pseudo('::before') {
       transform: translate(-50%, 0) scaleX(1);
@@ -21,7 +21,7 @@
     bottom: 0;
     width: 100%;
     height: $before-height;
-    background-color: currentColor;
+    background-color: $text-color-2;
     transform-origin: center;
     transform: translate(-50%, 0) scaleX(0);
     transition: transform $transition-duraction ease-in-out;
@@ -31,6 +31,7 @@
 .link-underline-show-left-right {
   span {
     position: relative;
+    color: $text-color-2;
 
     @include hover-pseudo('::before') {
       transform-origin: bottom left;
@@ -44,8 +45,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2px;
-    background-color: currentColor;
+    height: 1px;
+    background-color: $text-color-2;
     border-radius: 5px;
     transform-origin: bottom right;
     transform: scaleX(0);
