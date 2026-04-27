@@ -451,6 +451,95 @@ h6 {
     margin-bottom: calc(40px + (54) * (100vw - 320px) / (1120));
   }
 }
+.trending__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-trending {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-radius: 16px;
+  padding-inline: 20px;
+  padding-block: 22px;
+  border: 1px solid #754f24;
+  -ms-flex-item-align: self-end;
+      align-self: self-end;
+}
+.card-trending__img {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card-trending__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.card-trending__img {
+  margin-bottom: 30px;
+}
+@media (max-width: 1440px) {
+  .card-trending__img {
+    margin-bottom: calc(15px + (15) * (100vw - 320px) / (1120));
+  }
+}
+.card-trending__title {
+  font-weight: 600;
+  color: #2e2e2e;
+  font-size: 1.5rem;
+}
+@media (max-width: 1440px) {
+  .card-trending__title {
+    font-size: calc(1.25rem + (0.25) * (100vw - 20rem) / (70));
+  }
+}
+.card-trending__title {
+  margin-bottom: 38px;
+}
+@media (max-width: 1440px) {
+  .card-trending__title {
+    margin-bottom: calc(20px + (18) * (100vw - 320px) / (1120));
+  }
+}
+.card-trending__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card-trending__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 38px;
+     -moz-column-gap: 38px;
+          column-gap: 38px;
+}
+@media (max-width: 1440px) {
+  .card-trending__buttons {
+    -webkit-column-gap: calc(20px + (18) * (100vw - 320px) / (1120));
+       -moz-column-gap: calc(20px + (18) * (100vw - 320px) / (1120));
+            column-gap: calc(20px + (18) * (100vw - 320px) / (1120));
+  }
+}
+.card-trending__price-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.card-trending__actual-price {
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .summer__container {
   margin-bottom: 132px;

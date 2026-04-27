@@ -4,4 +4,45 @@
   &__container {
     @include adaptive-property(margin-bottom, 40, 0, 94);
   }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.card-trending {
+  flex-grow: 0;
+  border-radius: $radius-s;
+  padding-inline: 20px;
+  padding-block: 22px;
+  border: 1px solid $bg-color-olive;
+  align-self: self-end;
+
+  &__img {
+    border-radius: $radius-s;
+    @include ibg;
+    @include adaptive-property(margin-bottom, 15, 0, 30);
+  }
+  &__title {
+    font-weight: 600;
+    color: $text-color-main;
+    @include adaptive-property(font-size, 1.25, 0, 1.5, rem);
+    @include adaptive-property(margin-bottom, 20, 0, 38);
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons {
+    display: flex;
+    @include adaptive-property(column-gap, 20, 0, 38);
+  }
+  &__price-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__actual-price {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
