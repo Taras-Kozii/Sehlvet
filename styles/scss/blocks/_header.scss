@@ -11,9 +11,7 @@
   &__content {
     width: 100%;
     padding: 10px 0;
-    padding: 10px 0;
     @include flex(space-between, center);
-    @include adaptive-property(margin-bottom, 50, 0, 150);
   }
 
   &__menu {

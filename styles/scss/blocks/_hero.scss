@@ -3,6 +3,7 @@
 .hero {
   &__container {
     position: relative;
+    @include adaptive-property(margin-top, 50, 0, 150);
   }
   &__text-block {
     max-width: 584px;
@@ -23,15 +24,39 @@
     @include adaptive-property(margin-bottom, 40, 0, 100);
     margin-right: 44px;
   }
-  // &__button {
-  //   @include adaptive-property(margin-bottom, 68, 0, 146);
-  // }
   &__img {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 670px;
-    aspect-ratio: 670 / 900;
+    aspect-ratio: 670 / 850;
+    img {
+      position: relative;
+      z-index: 2;
+    }
     @include ibg(contain);
+    overflow: visible;
+  }
+  &__img::before,
+  &__img::after {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    content: "";
+    width: 455px;
+    height: 640px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+  &__img::before {
+    right: 5%;
+    background-color: $bg-color-olive;
+  }
+  &__img:after {
+    left: 55%;
+    border: 2px solid $bg-color-olive;
+    rotate: -11deg;
+    translate: -50% 0;
+    z-index: 1;
   }
 }
