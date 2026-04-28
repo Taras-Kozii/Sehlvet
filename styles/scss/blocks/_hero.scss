@@ -1,1 +1,37 @@
 @use "../utils/_index" as *;
+
+.hero {
+  &__container {
+    position: relative;
+  }
+  &__text-block {
+    max-width: 584px;
+    @include adaptive-property(padding-bottom, 68, 0, 146);
+  }
+  &__title {
+    font-family: "Wilkysta";
+    font-weight: 400;
+    line-height: 116.666667%; /* 112/96 */
+    @include adaptive-property(margin-bottom, 20, 0, 40);
+    @include adaptive-property(font-size, 36, 0, 96);
+    
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 138.888889%; /* 25/18 */
+    @include adaptive-property(margin-bottom, 40, 0, 100);
+    margin-right: 44px;
+  }
+  // &__button {
+  //   @include adaptive-property(margin-bottom, 68, 0, 146);
+  // }
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 670px;
+    aspect-ratio: 670 / 900;
+    @include ibg(contain);
+  }
+}

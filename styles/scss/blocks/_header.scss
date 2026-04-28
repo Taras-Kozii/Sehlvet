@@ -1,7 +1,7 @@
 @use "../utils/_index" as *;
 
 .header {
-  position: fixed; //sticky
+  position: sticky; //sticky
   top: 0;
   right: 0;
   left: 0;
@@ -11,7 +11,9 @@
   &__content {
     width: 100%;
     padding: 10px 0;
+    padding: 10px 0;
     @include flex(space-between, center);
+    @include adaptive-property(margin-bottom, 50, 0, 150);
   }
 
   &__menu {
