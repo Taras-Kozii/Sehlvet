@@ -3,7 +3,7 @@
 .hero {
   &__container {
     position: relative;
-    @include adaptive-property(margin-top, 50, 0, 150);
+    @include adaptive-property(margin-top, 40, 0, 92);
   }
   &__text-block {
     max-width: 584px;

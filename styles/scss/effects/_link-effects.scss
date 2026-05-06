@@ -31,7 +31,7 @@
 .link-underline-show-left-right {
   span {
     position: relative;
-    color: $text-color-2;
+    color: inherit;
 
     @include hover-pseudo('::before') {
       transform-origin: bottom left;
@@ -46,7 +46,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background-color: $text-color-2;
+    background-color: currentColor;
     border-radius: 5px;
     transform-origin: bottom right;
     transform: scaleX(0);

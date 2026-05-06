@@ -39,38 +39,76 @@
         <div class="header__container">
           <div class="header__content">
             <a href="#" class="logo header__logo logo" aria-label="logo-icon">
-              <img src="" alt="logo" decoding="async" width="44" height="42" />
+              Sehlvet
             </a>
-            <div class="header__menu menu anim">
+            <div class="header__menu menu">
               <nav class="menu__body">
                 <ul class="menu__list">
                   <li class="menu__item">
                     <a
                       href="#"
-                      class="menu__link hover-underline"
+                      class="menu__link link-underline-show-left-right"
                       data-goto=".hero"
-                      ><span>Головна</span></a
+                      ><span>Home</span></a
                     >
                   </li>
                   <li class="menu__item">
                     <a
                       href="#"
-                      class="menu__link hover-underline"
-                      data-goto=".hero"
-                      ><span>Головна</span></a
+                      class="menu__link link-underline-show-left-right"
+                      data-goto=".trending"
+                      ><span>Collections</span></a
                     >
                   </li>
                   <li class="menu__item">
                     <a
                       href="#"
-                      class="menu__link hover-underline"
-                      data-goto=".hero"
-                      ><span>Головна</span></a
+                      class="menu__link link-underline-show-left-right"
+                      data-goto=".summer"
+                      ><span>Brands</span></a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      class="menu__link link-underline-show-left-right"
+                      data-goto=".reviews"
+                      ><span>About Us</span></a
                     >
                   </li>
                 </ul>
               </nav>
-              <button class="burger midle-hidden"><span></span></button>
+              <button class="burger rotate"><span></span></button>
+            </div>
+            <div class="header__buttons">
+              <button type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24.52"
+                  height="30"
+                  fill="none"
+                >
+                  <path
+                    fill="#2f2f2f"
+                    fill-rule="evenodd"
+                    d="M16.838 0c4.882 0 7.682 2.416 7.682 6.625v20.919c0 .877-.452 1.667-1.212 2.11a2.42 2.42 0 0 1-2.434.02l-8.577-4.846-8.656 4.855c-.374.21-.784.317-1.196.317-.425 0-.85-.114-1.235-.341A2.42 2.42 0 0 1 0 27.55V6.362C0 2.318 2.802 0 7.687 0zm0 2.159h-9.15c-3.669 0-5.53 1.413-5.53 4.203v21.189c0 .135.078.208.143.246.065.04.167.069.285.003l9.184-5.152c.328-.183.73-.184 1.06.001l9.104 5.143c.12.07.222.038.287-.001a.28.28 0 0 0 .14-.247V6.46c-.01-1.238-.25-4.302-5.523-4.302m.632 7.524a1.08 1.08 0 0 1 0 2.158H6.939a1.08 1.08 0 0 1 0-2.158z"
+                  />
+                </svg>
+              </button>
+              <button type="button" class="button-bag">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28.355"
+                  height="30"
+                  fill="none"
+                >
+                  <path
+                    fill="#2f2f2f"
+                    fill-rule="evenodd"
+                    d="M14.16 0c3.784 0 6.91 2.883 7.296 6.571l.108.002c2.099 0 4.651 1.394 5.513 5.304l1.142 8.841c.41 2.854-.103 5.143-1.526 6.785C25.277 29.136 23.036 30 20.211 30H8.126c-3.103 0-5.264-.76-6.61-2.322C.167 26.11-.285 23.762.175 20.695l1.124-8.724c.738-4 3.438-5.398 5.529-5.398a7.42 7.42 0 0 1 2.121-4.435A7.4 7.4 0 0 1 14.13 0zm7.404 8.744H6.827c-.639 0-2.773.258-3.385 3.565l-1.118 8.686c-.363 2.437-.082 4.2.837 5.267.908 1.054 2.532 1.566 4.965 1.566H20.21c1.518 0 3.59-.302 4.84-1.747.993-1.145 1.335-2.85 1.017-5.07l-1.128-8.762c-.48-2.158-1.75-3.505-3.376-3.505m-3.181 4.03c.599 0 1.119.487 1.119 1.087 0 .599-.453 1.085-1.053 1.085h-.066a1.086 1.086 0 0 1 0-2.171m-8.441 0c.6 0 1.12.487 1.12 1.087 0 .599-.455 1.085-1.055 1.085h-.065a1.086 1.086 0 0 1 0-2.171m4.214-10.602h-.022c-1.362 0-2.69.548-3.652 1.505a5.2 5.2 0 0 0-1.464 2.895h10.25a5.18 5.18 0 0 0-5.112-4.4"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -650,7 +688,7 @@
                   <a
                     href="#"
                     class="footer-menu__link link-underline-show-left-right"
-                    data-goto=""
+                    data-goto=".hero"
                     ><span>Home</span></a
                   >
                 </li>
@@ -658,7 +696,7 @@
                   <a
                     href="#"
                     class="footer-menu__link link-underline-show-left-right"
-                    data-goto=""
+                    data-goto=".trending"
                     ><span>Collections</span></a
                   >
                 </li>
@@ -666,7 +704,7 @@
                   <a
                     href="#"
                     class="footer-menu__link link-underline-show-left-right"
-                    data-goto=""
+                    data-goto=".summer"
                     ><span>Brands</span></a
                   >
                 </li>
@@ -674,7 +712,7 @@
                   <a
                     href="#"
                     class="footer-menu__link link-underline-show-left-right"
-                    data-goto=""
+                    data-goto=".reviews"
                     ><span>About Us</span></a
                   >
                 </li>
