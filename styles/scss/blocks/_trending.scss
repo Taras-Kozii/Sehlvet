@@ -4,9 +4,19 @@
   &__container {
     @include adaptive-property(margin-bottom, 40, 0, 94);
   }
+  &__header {
+    @include adaptive-property(margin-bottom, 30, 0, 0);
+  }
   &__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1.25rem;
+    column-gap: 1rem;
+    @include on-mobile-l {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
   }
   &__card {
     flex-grow: 0;
@@ -15,16 +25,18 @@
     flex-direction: column;
     @include adaptive-property(row-gap, 24, 0, 57);
     &--mg {
-    margin-bottom: 28px;
-  }
+      @include on-mobile-l {
+        margin-bottom: 28px;
+      }
+    }
   }
 }
 
 .card-trending {
   border-radius: $radius-s;
-  padding-inline: 20px;
-  padding-block: 24px;
   border: 1px solid $bg-color-olive;
+  @include adaptive-property(padding-inline, 0.75, 0, 1.25, rem);
+  @include adaptive-property(padding-block, 1, 0, 1.5, rem);
 
   &__img {
     border-radius: $radius-s;
@@ -46,7 +58,7 @@
   &__title {
     font-weight: 600;
     color: $text-color-main;
-    @include adaptive-property(font-size, 1.25, 0, 1.5, rem);
+    @include adaptive-property(font-size, 1, 0, 1.5, rem);
     @include adaptive-property(margin-bottom, 20, 0, 38);
   }
   &__footer {

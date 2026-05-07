@@ -7,7 +7,7 @@
     @include adaptive-property(margin-bottom, 40, 0, 0);
   }
   &__content {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,9 +24,6 @@
     @include adaptive-property(margin-bottom, 20, 0, 40);
     @include adaptive-property(font-size, 36, 0, 96);
     text-align: center;
-    // @media (min-width: 840px) {
-    //   text-align: left;
-    // }
     @include on-mobile-l {
       text-align: left;
     }
@@ -36,16 +33,14 @@
     font-weight: 400;
     line-height: 138.888889%; /* 25/18 */
     @include adaptive-property(margin-bottom, 40, 0, 100);
-    // @media (min-width: 840px) {
-    //   margin-right: 44px;
-    // }
     @include on-mobile-l {
       margin-right: 44px;
     }
   }
   &__button {
-    @media (max-width: 768px) {
-      margin-inline: auto;
+    margin-inline: auto;
+    @include on-mobile-l {
+      margin-inline: 0;
     }
   }
   &__img {
