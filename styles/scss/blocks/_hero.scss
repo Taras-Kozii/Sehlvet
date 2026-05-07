@@ -4,10 +4,18 @@
   &__container {
     position: relative;
     @include adaptive-property(margin-top, 40, 0, 92);
+    @include adaptive-property(margin-bottom, 40, 0, 0);
+  }
+  &__content {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__text-block {
     max-width: 584px;
-    @include adaptive-property(padding-bottom, 68, 0, 146);
+    @include adaptive-property(padding-bottom, 20, 0, 146);
   }
   &__title {
     font-family: "Wilkysta";
@@ -15,27 +23,52 @@
     line-height: 116.666667%; /* 112/96 */
     @include adaptive-property(margin-bottom, 20, 0, 40);
     @include adaptive-property(font-size, 36, 0, 96);
-    
+    text-align: center;
+    // @media (min-width: 840px) {
+    //   text-align: left;
+    // }
+    @include on-mobile-l {
+      text-align: left;
+    }
   }
   &__text {
     font-size: 18px;
     font-weight: 400;
     line-height: 138.888889%; /* 25/18 */
     @include adaptive-property(margin-bottom, 40, 0, 100);
-    margin-right: 44px;
+    // @media (min-width: 840px) {
+    //   margin-right: 44px;
+    // }
+    @include on-mobile-l {
+      margin-right: 44px;
+    }
+  }
+  &__button {
+    @media (max-width: 768px) {
+      margin-inline: auto;
+    }
   }
   &__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 670px;
+    position: relative;
+    z-index: -1;
     aspect-ratio: 670 / 850;
+    overflow: visible;
     img {
       position: relative;
       z-index: 2;
     }
     @include ibg(contain);
-    overflow: visible;
+    @include adaptive-property(width, 320, 0, 670);
+    // @media (min-width: 841px) {
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 0;
+    // }
+    @include on-mobile-l {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
   &__img::before,
   &__img::after {
@@ -43,10 +76,10 @@
     bottom: 0;
     z-index: -1;
     content: "";
-    width: 455px;
-    height: 640px;
-    border-top-left-radius: 250px;
-    border-top-right-radius: 250px;
+    @include adaptive-property(width, 220, 0, 455);
+    @include adaptive-property(height, 280, 0, 640);
+    @include adaptive-property(border-top-left-radius, 120, 0, 250);
+    @include adaptive-property(border-top-right-radius, 120, 0, 250);
   }
   &__img::before {
     right: 5%;
