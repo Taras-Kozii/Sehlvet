@@ -4,4 +4,7 @@
   &__container {
     @include adaptive-property(margin-bottom, 60, 0, 132);
   }
+  &__header {
+    margin-bottom: 30px;
+  }
 }

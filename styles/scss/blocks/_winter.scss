@@ -2,9 +2,6 @@
 
 .winter {
   &__header {
-    margin-left: auto;
-    width: fit-content;
-    text-align: right;
     @include adaptive-property(margin-bottom, 36, 0, 84);
   }
   &__container {

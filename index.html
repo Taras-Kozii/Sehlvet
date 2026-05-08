@@ -20,18 +20,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/css/styles.min.css" />
-    <!--SWIPER -->
-    <!-- <link
+
+    <link
       rel="preload"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
       as="style"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       media="print"
-      onload="this.media='all'"
-    /> -->
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
   </head>
   <body class="page right-fix-padding">
     <div class="wrapper">
@@ -484,7 +490,7 @@
         </section>
         <section class="winter">
           <div class="winter__container">
-            <div class="section-header winter__header">
+            <div class="section-header winter__header section-header--right">
               <h2 class="section-header__title title">
                 <strong>Winter</strong>
                 <span>Collections</span>
@@ -563,17 +569,146 @@
         </section>
         <section class="reviews">
           <div class="reviews__container">
-            <div class="section-header reviews__header">
+            <div class="section-header reviews__header section-header--right">
               <h2 class="section-header__title title">
                 <span>What our</span>
                 <strong>Customer says</strong>
               </h2>
-              <div class="line"></div>
+              <div class="line line--l"></div>
               <div class="section-header__body">
                 We value our customer’s feedback to provide the best service.
               </div>
             </div>
-            <div class="reviews__content"></div>
+            <div class="reviews__content">
+              <div class="swiper reviews-slider">
+                <div class="reviews-slider__body">
+                  <div class="swiper-wrapper reviews-slider__items">
+                    <div
+                      class="swiper-slide reviews-slider__item slide-reviews"
+                    >
+                      <div class="slide-reviews__body">
+                        <div class="slide-reviews__img">
+                          <img
+                            src="./images/customer.webp"
+                            alt="customer-photo"
+                            decoding="async"
+                            width="200"
+                            height="200"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="slide-reviews__text-content">
+                          <div class="slide-reviews__svg">
+                            <img
+                              src="./images/icons/lapk.svg"
+                              alt="customer-photo"
+                              decoding="async"
+                              width="54"
+                              height="48"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="slide-reviews__text">
+                            <p>
+                              Ladiesvibe provided me the exact quality product I
+                              wanted. I’m very much satisfied by their quick
+                              delivery process. They delivered my dress within a
+                              day.
+                            </p>
+                          </div>
+                          <h4 class="slide-reviews__name">Jane Bennet</h4>
+                          <h5 class="slide-reviews__role">Fashion Model</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-slide reviews-slider__item slide-reviews"
+                    >
+                      <div class="slide-reviews__body">
+                        <div class="slide-reviews__img">
+                          <img
+                            src="./images/customer.webp"
+                            alt="customer-photo"
+                            decoding="async"
+                            width="200"
+                            height="200"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="slide-reviews__text-content">
+                          <div class="slide-reviews__svg">
+                            <img
+                              src="./images/icons/lapk.svg"
+                              alt="customer-photo"
+                              decoding="async"
+                              width="54"
+                              height="48"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="slide-reviews__text">
+                            <p>
+                              Ladiesvibe provided me the exact quality product I
+                              wanted. I’m very much satisfied by their quick
+                              delivery process. They delivered my dress within a
+                              day.
+                            </p>
+                          </div>
+                          <h4 class="slide-reviews__name">Jane Bennet</h4>
+                          <h5 class="slide-reviews__role">Fashion Model</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-slide reviews-slider__item slide-reviews"
+                    >
+                      <div class="slide-reviews__body">
+                        <div class="slide-reviews__img">
+                          <img
+                            src="./images/customer.webp"
+                            alt="customer-photo"
+                            decoding="async"
+                            width="200"
+                            height="200"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="slide-reviews__text-content">
+                          <div class="slide-reviews__svg">
+                            <img
+                              src="./images/icons/lapk.svg"
+                              alt="customer-photo"
+                              decoding="async"
+                              width="54"
+                              height="48"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="slide-reviews__text">
+                            <p>
+                              Ladiesvibe provided me the exact quality product I
+                              wanted. I’m very much satisfied by their quick
+                              delivery process. They delivered my dress within a
+                              day.
+                            </p>
+                          </div>
+                          <h4 class="slide-reviews__name">Jane Bennet</h4>
+                          <h5 class="slide-reviews__role">Fashion Model</h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- buttons -->
+                  </div>
+                  <div class="reviews-slider__prev">
+                    <img src="./images/icons/arow.svg" alt="arrow" />
+                  </div>
+                  <div class="reviews-slider__next">
+                    <img src="./images/icons/arow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -745,12 +880,10 @@
         </div>
       </footer>
     </div>
-
-    <!--SWIPER -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
       defer
-    ></script> -->
+    ></script>
     <script type="module" src="./scripts/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
