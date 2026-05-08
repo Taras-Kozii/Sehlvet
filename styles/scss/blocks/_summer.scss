@@ -36,6 +36,7 @@
   &__img {
     border-radius: $radius-l;
     margin-inline: auto;
+    overflow: hidden;
     @include ibg;
   }
   &__img-left {
@@ -66,6 +67,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr auto;
+    overflow: hidden;
+    border-radius: $radius-l;
   }
   &__button {
     margin-inline: auto;

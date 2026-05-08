@@ -30,6 +30,9 @@
     max-width: 588px; /* 588px/1200 */
   }
   &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
     line-height: 133.333333%; /* 24/18 */
     font-weight: 400;
     @include adaptive-property(font-size, 0.875, 0, 1.125, rem);

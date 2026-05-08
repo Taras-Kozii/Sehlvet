@@ -7,25 +7,21 @@
   left: 0;
   z-index: 50;
   transition: $transition-duraction;
-
   &__content {
     width: 100%;
-    // padding: 58px 0;
     @include flex(space-between, center);
-    @include  adaptive-property(padding-block, 24, 0, 58);
+    column-gap: 2rem;
+    @include adaptive-property(padding-block, 24, 0, 58);
     transition: all $transition-duraction;
   }
-
   &__menu {
     column-gap: 10px;
     @include flex(space-between, center);
   }
-
   &__logo {
     z-index: 5;
     @include position-r;
   }
-
   &__buttons {
     display: flex;
     @include adaptive-property(column-gap, 15, 0, 30);
@@ -34,7 +30,6 @@
     }
   }
 }
-
 .header.scrolling {
   background: rgba(79, 79, 84, 0.2);
   backdrop-filter: blur(18px);
@@ -43,10 +38,9 @@
     transition: all $transition-duraction;
   }
   .menu__link {
-    text-shadow: 1px 2px 4px #f1e6e6;;
+    text-shadow: 1px 2px 4px #f1e6e6;
   }
 }
-
 .header.hidden {
   opacity: 0;
   transform: translateY(-30px);

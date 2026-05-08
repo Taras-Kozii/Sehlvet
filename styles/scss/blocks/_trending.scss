@@ -35,8 +35,14 @@
 .card-trending {
   border-radius: $radius-s;
   border: 1px solid $bg-color-olive;
+  transition: $transition-duraction;
+  overflow: hidden;
   @include adaptive-property(padding-inline, 0.75, 0, 1.25, rem);
   @include adaptive-property(padding-block, 1, 0, 1.5, rem);
+  @include hover {
+    box-shadow: 5px 10px 20px #d1d1d1;
+    translate: 0 -2px;
+  }
 
   &__img {
     border-radius: $radius-s;
@@ -49,11 +55,18 @@
   }
   &__img--small {
     max-width: 294px;
+    @include on-desktop {
+      width: 294px;
+    }
     aspect-ratio: 294 / 349;
   }
   &__img--big {
     max-width: 400px;
     aspect-ratio: 400 / 525;
+    @include on-desktop {
+      max-width: 100%;
+      width: 400px;
+    }
   }
   &__title {
     font-weight: 600;

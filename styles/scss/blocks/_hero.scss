@@ -29,6 +29,9 @@
     }
   }
   &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
     font-size: 18px;
     font-weight: 400;
     line-height: 138.888889%; /* 25/18 */
@@ -54,11 +57,6 @@
     }
     @include ibg(contain);
     @include adaptive-property(width, 320, 0, 670);
-    // @media (min-width: 841px) {
-    //   position: absolute;
-    //   right: 0;
-    //   bottom: 0;
-    // }
     @include on-mobile-l {
       position: absolute;
       right: 0;

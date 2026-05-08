@@ -435,6 +435,9 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
   padding-block: 58px;
 }
 @media (max-width: 1440px) {
@@ -737,6 +740,14 @@ h6 {
   }
 }
 .hero__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.625rem;
   font-size: 18px;
   font-weight: 400;
   line-height: 138.888889%; /* 25/18 */
@@ -912,6 +923,9 @@ h6 {
 .card-trending {
   border-radius: 16px;
   border: 1px solid #754f24;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
   padding-inline: 1.25rem;
 }
 @media (max-width: 1440px) {
@@ -925,6 +939,20 @@ h6 {
 @media (max-width: 1440px) {
   .card-trending {
     padding-block: calc(1rem + (0.5) * (100vw - 20rem) / (70));
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-trending:hover, .card-trending:focus-within {
+    -webkit-box-shadow: 5px 10px 20px #d1d1d1;
+            box-shadow: 5px 10px 20px #d1d1d1;
+    translate: 0 -2px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .card-trending:active, .card-trending:focus, .card-trending:focus-within {
+    -webkit-box-shadow: 5px 10px 20px #d1d1d1;
+            box-shadow: 5px 10px 20px #d1d1d1;
+    translate: 0 -2px;
   }
 }
 .card-trending__img {
@@ -955,11 +983,24 @@ h6 {
 }
 .card-trending__img--small {
   max-width: 294px;
+}
+@media (min-width: 1280px) {
+  .card-trending__img--small {
+    width: 294px;
+  }
+}
+.card-trending__img--small {
   aspect-ratio: 294/349;
 }
 .card-trending__img--big {
   max-width: 400px;
   aspect-ratio: 400/525;
+}
+@media (min-width: 1280px) {
+  .card-trending__img--big {
+    max-width: 100%;
+    width: 400px;
+  }
 }
 .card-trending__title {
   font-weight: 600;
@@ -1086,6 +1127,7 @@ h6 {
   border-radius: 36px;
   margin-inline: auto;
   overflow: hidden;
+  overflow: hidden;
 }
 .summer__img img {
   width: 100%;
@@ -1133,6 +1175,8 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr auto;
+  overflow: hidden;
+  border-radius: 36px;
 }
 .summer__button {
   margin-inline: auto;
@@ -1209,6 +1253,14 @@ h6 {
   max-width: 588px; /* 588px/1200 */
 }
 .winter__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.625rem;
   line-height: 133.333333%; /* 24/18 */
   font-weight: 400;
   font-size: 1.125rem;
