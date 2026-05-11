@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sehvet</title>
-    <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
     <link rel="preload" as="image" href="./images/hero.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +16,7 @@
       href="./fonts/Wilkysta.woff2"
       as="font"
       type="font/woff2"
-      crossorigin="anonymous"
+      crossorigin
     />
     <link rel="stylesheet" href="./styles/css/styles.min.css" />
 
@@ -81,12 +80,11 @@
               <button class="burger rotate"><span></span></button>
             </div>
             <div class="header__buttons">
-              <button type="button">
+              <button type="button" class="header__label" aria-label="label">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24.52"
                   height="30"
-                  fill="none"
                 >
                   <path
                     fill="#2f2f2f"
@@ -95,7 +93,11 @@
                   />
                 </svg>
               </button>
-              <button type="button" class="button-bag">
+              <button
+                type="button"
+                class="header__bag button-bag"
+                aria-label="bag-button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28.355"
@@ -184,9 +186,9 @@
                         loading="lazy"
                       />
                     </div>
-                    <h4 class="card-trending__title">
+                    <h3 class="card-trending__title">
                       <a href="#">Formal Shirt For Woman</a>
-                    </h4>
+                    </h3>
                     <div class="card-trending__footer">
                       <div class="card-trending__prices">
                         <strong>Price:</strong>
@@ -251,9 +253,9 @@
                         loading="lazy"
                       />
                     </div>
-                    <h4 class="card-trending__title">
+                    <h3 class="card-trending__title">
                       <a href="#"> Black and gray Exercise outfit</a>
-                    </h4>
+                    </h3>
                     <div class="card-trending__footer">
                       <div class="card-trending__prices">
                         <strong class="card-trending__price-text"
@@ -319,9 +321,9 @@
                         loading="lazy"
                       />
                     </div>
-                    <h4 class="card-trending__title">
+                    <h3 class="card-trending__title">
                       <a href="#">Yellow Jacket For Winter</a>
-                    </h4>
+                    </h3>
                     <div class="card-trending__footer">
                       <div class="card-trending__prices">
                         <strong>Price:</strong>
@@ -574,9 +576,7 @@
             </div>
             <div class="reviews__body">
               <div class="swiper reviews__slider">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
                   <div class="swiper-slide reviews__slide slide-reviews">
                     <div class="slide-reviews__body">
                       <div class="slide-reviews__img">
@@ -608,8 +608,8 @@
                             day.
                           </p>
                         </div>
-                        <h4 class="slide-reviews__name">Jane Bennet</h4>
-                        <h5 class="slide-reviews__role">Fashion Model</h5>
+                        <h3 class="slide-reviews__name">Jane Bennet</h3>
+                        <h4 class="slide-reviews__role">Fashion Model</h4>
                       </div>
                     </div>
                   </div>
@@ -644,8 +644,8 @@
                             day.
                           </p>
                         </div>
-                        <h4 class="slide-reviews__name">Slide 2</h4>
-                        <h5 class="slide-reviews__role">Some role</h5>
+                        <h3 class="slide-reviews__name">Slide 2</h3>
+                        <h4 class="slide-reviews__role">Some role</h4>
                       </div>
                     </div>
                   </div>
@@ -680,8 +680,8 @@
                             day.
                           </p>
                         </div>
-                        <h4 class="slide-reviews__name">Slide 3</h4>
-                        <h5 class="slide-reviews__role">Some role</h5>
+                        <h3 class="slide-reviews__name">Slide 3</h3>
+                        <h4 class="slide-reviews__role">Some role</h4>
                       </div>
                     </div>
                   </div>
@@ -894,7 +894,7 @@
           },
         },
         speed: 800,
-        initialSlide: 1,
+        initialSlide: 0,
         observer: true,
         observeParents: true,
         observeSlideChildren: true,

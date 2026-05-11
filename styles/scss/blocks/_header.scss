@@ -29,6 +29,17 @@
       z-index: 5;
     }
   }
+  &__label,
+  &__bag {
+    svg path {
+      transition: $transition-duraction;
+    }
+    svg {
+      @include hover-pseudo(" path") {
+        fill: #d67145;
+      }
+    }
+  }
 }
 .header.scrolling {
   background: rgba(79, 79, 84, 0.2);

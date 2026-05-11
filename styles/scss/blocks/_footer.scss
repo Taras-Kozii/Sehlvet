@@ -19,10 +19,12 @@
   &__logo {
     display: inline-block;
     margin-bottom: 0.875rem;
-    span {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: $text-color-2;
+    transition: $transition-duraction;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color-2;
+    @include hover {
+      color: #ffb99a;
     }
   }
   &__copyright {
@@ -73,5 +75,15 @@
   justify-content: space-between;
   @include on-mobile-l {
     justify-content: flex-start;
+  }
+  &__item {
+    svg path {
+      transition: $transition-duraction;
+    }
+    svg {
+      @include hover-pseudo(" path") {
+        stroke: #d67145;
+      }
+    }
   }
 }

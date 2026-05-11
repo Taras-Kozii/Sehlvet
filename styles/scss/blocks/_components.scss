@@ -5,7 +5,11 @@
   font-weight: 600;
   letter-spacing: 0;
   color: $text-color-main;
+  transition: $transition-duraction;
   @include adaptive-property(font-size, 1.8, 0, 2.25, rem);
+  @include hover {
+    color: #ffb99a;
+  }
 }
 .logo--white {
   color: $bg-color-main;

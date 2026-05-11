@@ -232,11 +232,23 @@ h6 {
   font-weight: 600;
   letter-spacing: 0;
   color: #2e2e2e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-size: 2.25rem;
 }
 @media (max-width: 1440px) {
   .logo {
     font-size: calc(1.8rem + (0.45) * (100vw - 20rem) / (70));
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .logo:hover, .logo:focus-within {
+    color: #ffb99a;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .logo:active, .logo:focus, .logo:focus-within {
+    color: #ffb99a;
   }
 }
 
@@ -494,6 +506,20 @@ h6 {
 }
 .header__buttons button {
   z-index: 5;
+}
+.header__label svg path, .header__bag svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header__label svg:hover path, .header__label svg:focus-within path, .header__bag svg:hover path, .header__bag svg:focus-within path {
+    fill: #d67145;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .header__label svg:active path, .header__label svg:focus path, .header__label svg:focus-within path, .header__bag svg:active path, .header__bag svg:focus path, .header__bag svg:focus-within path {
+    fill: #d67145;
+  }
 }
 
 .header.scrolling {
@@ -1059,6 +1085,31 @@ h6 {
   font-size: 18px;
   font-weight: 500;
 }
+.card-trending button svg g,
+.card-trending button svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-trending button svg:hover g, .card-trending button svg:focus-within g {
+    stroke: #d67145;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .card-trending button svg:active g, .card-trending button svg:focus g, .card-trending button svg:focus-within g {
+    stroke: #d67145;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-trending button svg:hover path, .card-trending button svg:focus-within path {
+    stroke: #d67145;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .card-trending button svg:active path, .card-trending button svg:focus path, .card-trending button svg:focus-within path {
+    stroke: #d67145;
+  }
+}
 
 .summer__container {
   margin-bottom: 132px;
@@ -1609,11 +1660,21 @@ h6 {
 .footer__logo {
   display: inline-block;
   margin-bottom: 0.875rem;
-}
-.footer__logo span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-size: 1.5rem;
   font-weight: 600;
   color: #ded9d6;
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer__logo:hover, .footer__logo:focus-within {
+    color: #ffb99a;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .footer__logo:active, .footer__logo:focus, .footer__logo:focus-within {
+    color: #ffb99a;
+  }
 }
 .footer__copyright {
   font-size: 1rem;
@@ -1692,5 +1753,19 @@ h6 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+.socials__item svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .socials__item svg:hover path, .socials__item svg:focus-within path {
+    stroke: #d67145;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .socials__item svg:active path, .socials__item svg:focus path, .socials__item svg:focus-within path {
+    stroke: #d67145;
   }
 }

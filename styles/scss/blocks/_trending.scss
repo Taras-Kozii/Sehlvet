@@ -90,4 +90,18 @@
     font-size: 18px;
     font-weight: 500;
   }
+  button {
+    svg g,
+    svg path {
+      transition: $transition-duraction;
+    }
+    svg {
+      @include hover-pseudo(" g") {
+        stroke: #d67145;
+      }
+      @include hover-pseudo(" path") {
+        stroke: #d67145;
+      }
+    }
+  }
 }
