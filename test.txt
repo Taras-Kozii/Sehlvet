@@ -1,46 +1,149 @@
-            <button class="button button--bg">
-                <span>Explore</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="36.061"
-                  height="16.008"
-                  fill="none"
-                >
-                  <g
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path d="M1 8.004h34M28 1.004l7 7-7 7" />
-                  </g>
-                </svg>
-              </button>
+.reviews-slider {
+  min-width: 0;
+  @include adaptive-property(width, 320, 0, 1280);
+  &__body {
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  &__items {
+    align-items: center;
+    margin-inline: auto;
+  }
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    column-gap: 28px;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $bg-color-olive;
+    cursor: pointer;
+    @include adaptive-property(width, 30, 0, 60);
+    @include adaptive-property(height, 30, 0, 60);
+    @include adaptive-property(border-radius, 8, 0, 16);
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
 
-          <button class="button">
-                <span>Explore </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="36.061"
-                  height="16.008"
-                  fill="none"
-                >
-                  <g
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path d="M1 8.004h34M28 1.004l7 7-7 7" />
-                  </g>
-                </svg>
-              </button>
+.slide-reviews {
+  position: relative;
+  left: 0;
+  top: 0;
+  flex-shrink: 0;
+  // aspect-ratio: 1.1 / 1;
+  cursor: pointer;
+  transition: $transition-duraction;
+  overflow: hidden;
+  @include adaptive-property(width, 280, 0, 945);
 
-              <div class="section-header">
-                <h2 class="section-header__title title">
-                  <strong>Trending</strong>
-                  <span>Collections</span>
-                </h2>
-                <div class="line"></div>
-                <div class="section-header__body">
-                  Have a look on what’s trending now!
-                </div>
-              </div>
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptive-property(column-gap, 20, 0, 40);
+    @include on-mobile-l {
+      flex-wrap: nowrap;
+    }
+  }
+  &__text-content {
+    max-width: 572px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__svg {
+    @include adaptive-property(width, 27, 0, 54);
+    @include adaptive-property(height, 24, 0, 48);
+    @include adaptive-property(margin-block, 20, 0, 44);
+    @include ibg;
+  }
+  &__img {
+    flex-shrink: 0;
+    border-radius: $radius-l;
+    @include adaptive-property(width, 142, 0, 284);
+    @include adaptive-property(height, 174, 0, 348);
+    @include ibg(cover);
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+    font-weight: 400;
+    @include adaptive-property(font-size, 0.875, 0, 1, rem);
+    margin-bottom: auto;
+  }
+  &__name {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    @include adaptive-property(font-size, 1.125, 0, 1.5, rem);
+  }
+  &__role {
+    justify-self: self-start;
+    font-weight: 400;
+    @include adaptive-property(font-size, 0.875, 0, 1, rem);
+  }
+}
+
+<div class="reviews-slider__buttons">
+                    <div class="reviews-slider__prev reviews-slider__button">
+                      <img
+                        src="./images/icons/arrow-slider-left.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <div class="reviews-slider__next reviews-slider__button">
+                      <img
+                        src="./images/icons/arrow-slider-right.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                  </div>
+
+
+ <div
+                      class="swiper-slide reviews-slider__item slide-reviews"
+                    >
+                      <div class="slide-reviews__body">
+                        <div class="slide-reviews__img">
+                          <img
+                            src="./images/customer.webp"
+                            alt="customer-photo"
+                            decoding="async"
+                            width="200"
+                            height="200"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="slide-reviews__text-content">
+                          <div class="slide-reviews__svg">
+                            <img
+                              src="./images/icons/lapk.svg"
+                              alt="customer-photo"
+                              decoding="async"
+                              width="54"
+                              height="48"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="slide-reviews__text">
+                            <p>
+                              Ladiesvibe provided me the exact quality product I
+                              wanted. I’m very much satisfied by their quick
+                              delivery process. They delivered my dress within a
+                              day.
+                            </p>
+                          </div>
+                          <h4 class="slide-reviews__name">Jane Bennet</h4>
+                          <h5 class="slide-reviews__role">Fashion Model</h5>
+                        </div>
+                      </div>
+                    </div>

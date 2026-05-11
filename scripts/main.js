@@ -2,7 +2,7 @@
 
 import { initNavigation } from './menu.js';
 import { initHeader } from './header.js';
-import { initSlider } from './slider.js';
+// import { initSlider } from './slider.js';
 // import { VanillaTilt } from './effects/tilt/vanilla-tilt.js';
 // import SimpleParallax from './effects/simpleParallax/index.js';
 // import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
@@ -10,7 +10,7 @@ import { initSlider } from './slider.js';
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initHeader();
-  initSlider();
+  // initSlider();
   // new SimpleParallax(document.querySelectorAll('.parallax-img'), {
   //   delay: 0.6,
   //   orientation: 'down',
