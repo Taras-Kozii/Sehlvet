@@ -35,6 +35,10 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 138.888889%; /* 25/18 */
+    transition: $transition-duraction-long 150ms;
+    opacity: 0;
+    translate: 0 -10px;
+
     @include adaptive-property(margin-bottom, 40, 0, 100);
     @include on-mobile-l {
       margin-right: 44px;
@@ -42,6 +46,9 @@
   }
   &__button {
     margin-inline: auto;
+    transition: $transition-duraction-long 350ms;
+    opacity: 0;
+    translate: 0 -10px;
     @include on-mobile-l {
       margin-inline: 0;
     }
@@ -75,6 +82,7 @@
     @include adaptive-property(border-top-right-radius, 120, 0, 250);
   }
   &__img::before {
+    transition: $transition-duraction-long 250ms;
     right: 5%;
     background-color: $bg-color-olive;
   }
@@ -84,5 +92,13 @@
     rotate: -11deg;
     translate: -50% 0;
     z-index: 1;
+  }
+}
+
+.hero.active {
+  .hero__text,
+  .hero__button {
+    opacity: 1;
+    translate: 0 0;
   }
 }

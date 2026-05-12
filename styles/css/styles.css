@@ -93,48 +93,6 @@ h6 {
   font-style: normal;
   font-display: swap;
 }
-.link-underline-show-center {
-  color: #ded9d6;
-  cursor: pointer;
-}
-.link-underline-show-center span {
-  position: relative;
-  color: #ded9d6;
-}
-@media (hover: hover) and (pointer: fine) {
-  .link-underline-show-center span:hover::before, .link-underline-show-center span:focus-within::before {
-    -webkit-transform: translate(-50%, 0) scaleX(1);
-        -ms-transform: translate(-50%, 0) scaleX(1);
-            transform: translate(-50%, 0) scaleX(1);
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  .link-underline-show-center span:active::before, .link-underline-show-center span:focus::before, .link-underline-show-center span:focus-within::before {
-    -webkit-transform: translate(-50%, 0) scaleX(1);
-        -ms-transform: translate(-50%, 0) scaleX(1);
-            transform: translate(-50%, 0) scaleX(1);
-  }
-}
-.link-underline-show-center span::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #ded9d6;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translate(-50%, 0) scaleX(0);
-      -ms-transform: translate(-50%, 0) scaleX(0);
-          transform: translate(-50%, 0) scaleX(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
 .link-underline-show-left-right span {
   position: relative;
   color: inherit;
@@ -296,8 +254,8 @@ h6 {
 }
 @media (hover: hover) and (pointer: fine) {
   .button:hover, .button:focus-within {
-    -webkit-box-shadow: 10px 10px 40px #d1d1d1;
-            box-shadow: 10px 10px 40px #d1d1d1;
+    -webkit-box-shadow: 10px 10px 20px #d1d1d1;
+            box-shadow: 10px 10px 20px #d1d1d1;
     -webkit-transform: translateY(-5px);
         -ms-transform: translateY(-5px);
             transform: translateY(-5px);
@@ -305,8 +263,8 @@ h6 {
 }
 @media (hover: none) and (pointer: coarse) {
   .button:active, .button:focus, .button:focus-within {
-    -webkit-box-shadow: 10px 10px 40px #d1d1d1;
-            box-shadow: 10px 10px 40px #d1d1d1;
+    -webkit-box-shadow: 10px 10px 20px #d1d1d1;
+            box-shadow: 10px 10px 20px #d1d1d1;
     -webkit-transform: translateY(-5px);
         -ms-transform: translateY(-5px);
             transform: translateY(-5px);
@@ -338,13 +296,17 @@ h6 {
 }
 
 .line {
-  max-width: 410px;
   background-color: #754f24;
   height: 1px;
+  -webkit-transition: all 0.65s 0.2s;
+  transition: all 0.65s 0.2s;
+  max-width: 0px;
 }
 
 .line--l {
-  max-width: 530px;
+  max-width: 0px;
+  -webkit-transition: all 0.65s;
+  transition: all 0.65s;
 }
 
 .title {
@@ -400,12 +362,20 @@ h6 {
   }
 }
 
+.section-header.active .line {
+  max-width: 410px;
+}
+
 .section-header--right {
   margin-left: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: right;
+}
+
+.section-header--right.active .line--l {
+  max-width: 530px;
 }
 
 .button-bag {
@@ -785,6 +755,10 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 138.888889%; /* 25/18 */
+  -webkit-transition: 0.65s 150ms;
+  transition: 0.65s 150ms;
+  opacity: 0;
+  translate: 0 -10px;
   margin-bottom: 100px;
 }
 @media (max-width: 1440px) {
@@ -799,6 +773,10 @@ h6 {
 }
 .hero__button {
   margin-inline: auto;
+  -webkit-transition: 0.65s 350ms;
+  transition: 0.65s 350ms;
+  opacity: 0;
+  translate: 0 -10px;
 }
 @media (min-width: 766.98px) {
   .hero__button {
@@ -878,6 +856,8 @@ h6 {
   }
 }
 .hero__img::before {
+  -webkit-transition: 0.65s 250ms;
+  transition: 0.65s 250ms;
   right: 5%;
   background-color: #754f24;
 }
@@ -887,6 +867,12 @@ h6 {
   rotate: -11deg;
   translate: -50% 0;
   z-index: 1;
+}
+
+.hero.active .hero__text,
+.hero.active .hero__button {
+  opacity: 1;
+  translate: 0 0;
 }
 
 .trending__container {
@@ -952,6 +938,11 @@ h6 {
   .trending__card--mg {
     margin-bottom: 28px;
   }
+}
+.trending__button {
+  -webkit-transition: 0.65s 350ms;
+  transition: 0.65s 350ms;
+  scale: 0;
 }
 
 .card-trending {
@@ -1111,6 +1102,10 @@ h6 {
   }
 }
 
+.trending.active .trending__button {
+  scale: 1;
+}
+
 .summer__container {
   margin-bottom: 132px;
 }
@@ -1222,7 +1217,15 @@ h6 {
   aspect-ratio: 224/284;
   z-index: 1;
 }
+.summer__text-left {
+  -webkit-transition: 0.65s 150ms;
+  transition: 0.65s 150ms;
+  scale: 0;
+}
 .summer__text-right {
+  -webkit-transition: 0.65s 350ms;
+  transition: 0.65s 350ms;
+  scale: 0;
   margin-bottom: 2.25rem;
 }
 @media (max-width: 1440px) {
@@ -1240,12 +1243,21 @@ h6 {
 .summer__button {
   margin-inline: auto;
   margin-top: 20px;
+  -webkit-transition: 0.65s 500ms;
+  transition: 0.65s 500ms;
+  scale: 0;
 }
 @media (min-width: 766.98px) {
   .summer__button {
     margin-top: 0;
     margin-inline: auto 0;
   }
+}
+
+.summer.active .summer__text-right,
+.summer.active .summer__text-left,
+.summer.active .summer__button {
+  scale: 1;
 }
 
 .winter__header {
@@ -1325,6 +1337,9 @@ h6 {
   }
 }
 .winter__text-right {
+  -webkit-transition: 0.65s 350ms;
+  transition: 0.65s 350ms;
+  scale: 0;
   margin-bottom: 56px;
 }
 @media (max-width: 1440px) {
@@ -1333,6 +1348,9 @@ h6 {
   }
 }
 .winter__text-left {
+  -webkit-transition: 0.65s 150ms;
+  transition: 0.65s 150ms;
+  scale: 0;
   margin-bottom: 17px;
 }
 .winter__imgs {
@@ -1369,11 +1387,20 @@ h6 {
 }
 .winter__button {
   margin-inline: auto;
+  -webkit-transition: scale 0.65s 500ms;
+  transition: scale 0.65s 500ms;
+  scale: 0;
 }
 @media (min-width: 766.98px) {
   .winter__button {
     margin-inline: auto 0;
   }
+}
+
+.winter.active .winter__text-right,
+.winter.active .winter__text-left,
+.winter.active .winter__button {
+  scale: 1;
 }
 
 .reviews__container {
@@ -1386,6 +1413,16 @@ h6 {
 }
 .reviews__header {
   margin-bottom: 30px;
+}
+
+.reviews.active .slide-reviews__svg {
+  rotate: 1turn;
+}
+.reviews.active .slide-reviews__text,
+.reviews.active .slide-reviews__name,
+.reviews.active .slide-reviews__role {
+  opacity: 1;
+  translate: 0 0;
 }
 
 .reviews-slider {
@@ -1517,6 +1554,8 @@ h6 {
           flex-direction: column;
 }
 .slide-reviews__svg {
+  -webkit-transition: 0.65s 150ms;
+  transition: 0.65s 150ms;
   width: 54px;
 }
 @media (max-width: 1440px) {
@@ -1600,6 +1639,10 @@ h6 {
 }
 .slide-reviews__text {
   margin-bottom: auto;
+  -webkit-transition: 0.65s 350ms;
+  transition: 0.65s 350ms;
+  opacity: 0;
+  translate: 0 -10px;
 }
 .slide-reviews__name {
   font-weight: 600;
@@ -1612,6 +1655,12 @@ h6 {
     font-size: calc(1.125rem + (0.375) * (100vw - 20rem) / (70));
   }
 }
+.slide-reviews__name {
+  -webkit-transition: 0.65s 500ms;
+  transition: 0.65s 500ms;
+  opacity: 0;
+  translate: 0 -10px;
+}
 .slide-reviews__role {
   justify-self: self-start;
   font-weight: 400;
@@ -1621,6 +1670,12 @@ h6 {
   .slide-reviews__role {
     font-size: calc(0.875rem + (0.125) * (100vw - 20rem) / (70));
   }
+}
+.slide-reviews__role {
+  -webkit-transition: 0.65s 600ms;
+  transition: 0.65s 600ms;
+  opacity: 0;
+  translate: 0 -10px;
 }
 
 .footer {
@@ -1681,6 +1736,9 @@ h6 {
   line-height: 131.25%; /* 21/16 */
   font-weight: 400;
   color: #ded9d6;
+  -webkit-transition: 0.65s 150ms;
+  transition: 0.65s 150ms;
+  opacity: 0;
   margin-bottom: 2rem;
 }
 @media (max-width: 1440px) {
@@ -1692,6 +1750,11 @@ h6 {
   max-width: 240px;
 }
 
+.footer-menu {
+  -webkit-transition: 0.65s 450ms;
+  transition: 0.65s 450ms;
+  opacity: 0;
+}
 .footer-menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1718,6 +1781,9 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.8125rem;
+  -webkit-transition: 0.65s 600ms;
+  transition: 0.65s 600ms;
+  opacity: 0;
 }
 .contacts__title {
   line-height: 131.25%; /* 21/16 */
@@ -1747,6 +1813,9 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.65s 300ms;
+  transition: 0.65s 300ms;
+  opacity: 0;
 }
 @media (min-width: 766.98px) {
   .socials {
@@ -1768,4 +1837,11 @@ h6 {
   .socials__item svg:active path, .socials__item svg:focus path, .socials__item svg:focus-within path {
     stroke: #d67145;
   }
+}
+
+.footer.active .footer__copyright,
+.footer.active .socials,
+.footer.active .contacts,
+.footer.active .footer-menu {
+  opacity: 1;
 }

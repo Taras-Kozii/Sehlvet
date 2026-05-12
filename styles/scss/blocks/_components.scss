@@ -39,7 +39,7 @@
     stroke: $bg-color-olive;
   }
   @include hover {
-    box-shadow: 10px 10px 40px #d1d1d1;
+    box-shadow: 10px 10px 20px #d1d1d1;
     transform: translateY(-5px);
   }
   @include hover-pseudo(" svg") {
@@ -56,12 +56,14 @@
   }
 }
 .line {
-  max-width: 410px;
   background-color: $bg-color-olive;
   height: 1px;
+  transition: all $transition-duraction-long 0.2s;
+  max-width: 0px;
 }
 .line--l {
-  max-width: 530px;
+  max-width: 0px;
+  transition: all $transition-duraction-long;
 }
 .title {
   color: $text-color-main;
@@ -87,10 +89,20 @@
   }
   @include adaptive-property(row-gap, 0.9375, 0, 1.875, rem);
 }
+.section-header.active {
+  .line {
+    max-width: 410px;
+  }
+}
 .section-header--right {
   margin-left: auto;
   width: fit-content;
   text-align: right;
+}
+.section-header--right.active {
+  .line--l {
+    max-width: 530px;
+  }
 }
 .button-bag {
   position: relative;

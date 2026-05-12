@@ -53,16 +53,13 @@ $radius: 0;
     @extend %menu-dash;
     margin-top: $gap + calc($line-height / -2);
   }
-
 }
 
 .rotate {
-
   &:before,
   &:after {
     display: none;
   }
-
   span {
     transition: 0.25s ease;
 

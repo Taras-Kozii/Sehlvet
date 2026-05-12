@@ -58,6 +58,7 @@
     flex-direction: column;
   }
   &__svg {
+    transition: $transition-duraction-long 150ms;
     @include adaptive-property(width, 27, 0, 54);
     @include adaptive-property(height, 24, 0, 48);
     @include adaptive-property(margin-block, 20, 0, 44);
@@ -77,16 +78,25 @@
     font-weight: 400;
     @include adaptive-property(font-size, 0.875, 0, 1, rem);
     margin-bottom: auto;
+    transition: $transition-duraction-long 350ms;
+    opacity: 0;
+    translate: 0 -10px;
   }
   &__name {
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.75rem;
     @include adaptive-property(font-size, 1.125, 0, 1.5, rem);
+    transition: $transition-duraction-long 500ms;
+    opacity: 0;
+    translate: 0 -10px;
   }
   &__role {
     justify-self: self-start;
     font-weight: 400;
     @include adaptive-property(font-size, 0.875, 0, 1, rem);
+    transition: $transition-duraction-long 600ms;
+    opacity: 0;
+    translate: 0 -10px;
   }
 }

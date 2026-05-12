@@ -1,33 +1,5 @@
 @use "../utils/index" as *;
 
-.link-underline-show-center {
-  $before-height: 1px;
-  color: $text-color-2;
-  cursor: pointer;
-
-  span {
-    position: relative;
-    color: $text-color-2;
-
-    @include hover-pseudo('::before') {
-      transform: translate(-50%, 0) scaleX(1);
-    }
-  }
-
-  span::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 100%;
-    height: $before-height;
-    background-color: $text-color-2;
-    transform-origin: center;
-    transform: translate(-50%, 0) scaleX(0);
-    transition: transform $transition-duraction ease-in-out;
-  }
-}
-
 .link-underline-show-left-right {
   span {
     position: relative;
@@ -53,4 +25,3 @@
     transition: transform $transition-duraction ease;
   }
 }
-

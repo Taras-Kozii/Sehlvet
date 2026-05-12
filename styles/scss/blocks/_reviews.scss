@@ -8,3 +8,14 @@
     margin-bottom: 30px;
   }
 }
+.reviews.active {
+  .slide-reviews__svg {
+    rotate: 1turn;
+  }
+  .slide-reviews__text,
+  .slide-reviews__name,
+  .slide-reviews__role {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

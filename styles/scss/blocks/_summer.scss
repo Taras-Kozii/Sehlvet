@@ -60,7 +60,13 @@
     aspect-ratio: 224 / 284;
     z-index: 1;
   }
+  &__text-left {
+    transition: $transition-duraction-long 150ms;
+    scale: 0;
+  }
   &__text-right {
+    transition: $transition-duraction-long 350ms;
+    scale: 0;
     @include adaptive-property(margin-bottom, 1.125, 0, 2.25, rem);
   }
   &__imgs {
@@ -73,9 +79,18 @@
   &__button {
     margin-inline: auto;
     margin-top: 20px;
+    transition: $transition-duraction-long 500ms;
+    scale: 0;
     @include on-mobile-l {
       margin-top: 0;
       margin-inline: auto 0;
     }
+  }
+}
+.summer.active {
+  .summer__text-right,
+  .summer__text-left,
+  .summer__button {
+    scale: 1;
   }
 }
