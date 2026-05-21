@@ -70,7 +70,6 @@
   }
   &__button {
     margin-inline: auto;
-    transition: scale $transition-duraction-long 500ms;
     scale: 0;
     @include on-mobile-l {
       margin-inline: auto 0;

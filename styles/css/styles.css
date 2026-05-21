@@ -773,8 +773,6 @@ h6 {
 }
 .hero__button {
   margin-inline: auto;
-  -webkit-transition: 0.65s 350ms;
-  transition: 0.65s 350ms;
   opacity: 0;
   translate: 0 -10px;
 }
@@ -874,6 +872,10 @@ h6 {
   opacity: 1;
   translate: 0 0;
 }
+.hero.active .hero__button {
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
+}
 
 .trending__container {
   margin-bottom: 94px;
@@ -940,9 +942,17 @@ h6 {
   }
 }
 .trending__button {
-  -webkit-transition: 0.65s 350ms;
-  transition: 0.65s 350ms;
+  -webkit-transition: all 0.65s 350ms;
+  transition: all 0.65s 350ms;
   scale: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 600px) {
+  .trending__button {
+    scale: 1;
+  }
 }
 
 .card-trending {
@@ -1387,8 +1397,6 @@ h6 {
 }
 .winter__button {
   margin-inline: auto;
-  -webkit-transition: scale 0.65s 500ms;
-  transition: scale 0.65s 500ms;
   scale: 0;
 }
 @media (min-width: 766.98px) {

@@ -46,7 +46,6 @@
   }
   &__button {
     margin-inline: auto;
-    transition: $transition-duraction-long 350ms;
     opacity: 0;
     translate: 0 -10px;
     @include on-mobile-l {
@@ -101,4 +100,8 @@
     opacity: 1;
     translate: 0 0;
   }
+  .hero__button {
+    transition-delay: 350ms;
+  }
 }
+

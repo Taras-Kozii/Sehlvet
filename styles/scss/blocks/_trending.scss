@@ -31,8 +31,12 @@
     }
   }
   &__button {
-    transition: $transition-duraction-long 350ms;
+    transition: all $transition-duraction-long 350ms;
     scale: 0;
+    width: fit-content;
+    @media (max-width: 600px) {
+      scale: 1;
+          }
   }
 }
 
